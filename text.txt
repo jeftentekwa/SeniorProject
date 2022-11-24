@@ -1,0 +1,25 @@
+" - Vin Number: " . $row["VinNumber"]. "-Price: " . $row["Price"].
+      " - Miles: " . $row["mileage"]. " - Make: " . $row["Make"]. " -Stock Number " . $row["stockNumber"].
+      " -Model: " . $row["model"]. " - Year: " . $row["year"]. " -Trim" . $row["trim"]. "<br>".
+      " -Body Type: " . $row["bodyType"]. " - Vehicle Type: " . $row["vehicleType"]. " - Drive Train:" . $row["driveTrain"].
+      " - Transmission: " . $row["transmission"]. " - Fuel Type: " . $row["fuelType"]. " - Engine Size" . $row["engineSize"].
+      " - Engine Block: " . $row["engineBlock"]. " - Purchased from: " . $row["pFrom"]. " - Stree: " . $row["street"].
+      " -City: " . $row["City"]. " - State: " . $row["state"]. " - Zip Code" . $row["zipCode"]. "<br>"
+
+       <script>
+        //sign up sheet appears on click5
+        document.getElementById("signInButton").addEventListener("click", function () 
+        {
+            
+            document.getElementById("signInDiv").style.display = "flex";
+        })
+
+        var modal = document.getElementById('signInDIv');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
