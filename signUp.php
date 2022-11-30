@@ -44,7 +44,7 @@ $stmt->bind_param("sss",
                   
 if ($stmt->execute()) {
 
-    header("Location: main.html"); // send you back to the main page after signing in 
+    header("Location: lognInForm.php"); // send you back to the main page after signing in 
     exit;
     
 } else {

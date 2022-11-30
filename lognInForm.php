@@ -1,5 +1,4 @@
 <?php
-
 $is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -22,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             session_regenerate_id();
             
-            $_SESSION["user_id"] = $user["id"];
+            $_SESSION["user_id"] = $user["ID"];
             
-            header("Location: main.html");
+            header("Location: main.php");
             exit;
         }
     }
@@ -41,10 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <link rel="stylesheet" href="lognIn.css"/>
     </header>
     <body>
+    <h1>Login</h1>
+    
+    <?php if ($is_invalid): ?>
+        <em>Enter a valid username or password</em>
+    <?php endif; ?>
       
         <div id="id01" class="modal">
           
-            <form class="modal-content animate">
+            <form class="modal-content animate" method="post">
               <div class="imgcontainer">
               <h1> Logn In</h1>
                 <img src="avatarImage.jpg" alt="Avatar" class="avatar">
@@ -62,12 +66,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <label>
                   <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
+                
               </div>
           
               <div class="container" style="background-color:#f1f1f1">
                 <button type="button"  class="cancelbtn" onclick="backButton()" >Cancel</button>
                 <span class="psw">Forgot <a href="#">password?</a></span>
               </div>
+              <p> Not register? <a href="signupForm.html">create an acoount</a></p>
             </form>
           </div>
     <!-- return the page to the previous page once you canncel  -->

@@ -61,16 +61,7 @@
     die("connection error ".mysqli_connect_error());
    }
    $sql = "SELECT * FROM usedcarinventory";
-result = $$conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "<tr><td>". $row["CarID"] . "</td><td>";
-    }
-  } else {
-    echo "0 results";
-  } 
+result = $$conn->query
 
   
 
@@ -78,3 +69,35 @@ if ($result->num_rows > 0) {
 
 
 ?>
+
+$is_invalid = false;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+    $mysqli = require __DIR__ . "/database.php";
+    
+    $sql = sprintf("SELECT * FROM plugin
+                    WHERE email = '%s'",
+                   $mysqli->real_escape_string($_POST["email"]));
+    
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+    
+    if ($user) {
+        
+        if (password_verify($_POST["password"], $user["password_hash"])) {
+            
+            session_start();
+            
+            session_regenerate_id();
+            
+            $_SESSION["user_id"] = $user["id"];
+            
+            header("Location: main.html");
+            exit;
+        }
+    }
+    
+    $is_invalid = true;
+}

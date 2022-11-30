@@ -26,21 +26,6 @@ p{
     display: inline-block;
 }
 
-/*#homeButton {
-    
-    width: 100px;
-    font-family: tahoma;
-    margin-top: 1px;
-    margin-right: 40px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    text-align: center;
-    padding: 8px;
-    border-radius: 8px;
-    background-color:lightblue;
-    color:white; 
-}*/
 .button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -58,6 +43,21 @@ p{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+#lognOutButton
+{
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    float: right;
+}
+#lognOutButton:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 
 #logoImg{
     width: 70%;
