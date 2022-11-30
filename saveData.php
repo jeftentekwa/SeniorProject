@@ -35,7 +35,7 @@
    }
    
 
-   $sql = "INSERT INTO usedcarinventory2022 (CarID, VinNumber, Price, Miles, StockNumber, Years, Make, Model, Trims, BodyType, VehicleType, DriveTrain, Transmission, FuelType, EngineSize, EngineBlock, PurchasedFrom, Street, City, States, Zip)
+   $sql = "INSERT INTO usedcarinventory (CarID, VinNumber, Price, Miles, StockNumber, Years, Make, Model, Trims, BodyType, VehicleType, DriveTrain, Transmission, FuelType, EngineSize, EngineBlock, PurchasedFrom, Street, City, States, Zip)
      VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_stmt_init($conn);

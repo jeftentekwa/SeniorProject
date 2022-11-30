@@ -33,7 +33,7 @@
    {
     die("connection error ".mysqli_connect_error());
    }
-   $sql = "DELETE FROM usedcarinventory2022 WHERE CarID = '$CarID'";
+   $sql = "DELETE FROM usedcarinventory WHERE CarID = '$CarID'";
    if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
   } else {

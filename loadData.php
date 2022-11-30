@@ -1,69 +1,87 @@
-<?php
-   $CarID = $_POST["CarID"];
-   $VinNum = $_POST["VinNumber"];
-   $Price = $_POST["Price"];
-   $mileage = $_POST["mileage"];
-   $Make = $_POST["make"];
-   $stockNumber = $_POST["stockNumber"];
-   $model = $_POST["model"];
-   $year = $_POST["year"];
-   $trim= $_POST["trim"];
-   $bodyType = $_POST["bodyType"];
-   $vehicleType= $_POST["vehicleType"];
-   $driveTrain = $_POST["driveTrain"];
-   $transmission= $_POST["transmission"];
-   $fuelType = $_POST["fuelType"];
-  $engineSize= $_POST["engineSize"]; 
-   $engineBlock = $_POST["engineBlock"];
-   $pFrom = $_POST["pFrom"];
-   $street = $_POST["street"];
-   $city = $_POST["City"];
-   $state = $_POST["state"];
-   $zip = $_POST["zipCode"];
-   $Price = $_POST["Price"]; 
+<?php 
+ // Database connection 
+ $host = "localhost";
+ $dbname ="mysql";
+ $username = "root";
+ $password ="";
 
-   // Database connection 
-   $host = "localhost";
-   $dbname ="mysql";
-   $username = "root";
-   $password ="";
-
-  $conn= mysqli_connect($host, $username, $password, $dbname); 
-   if(mysqli_connect_errno())
-   {
-    die("connection error ".mysqli_connect_error());
-   }
-   $sql = "SELECT * FROM usedcarinventory2022";
-$result = $conn->query($sql);
-
-/*if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "<tr><td>". $row["CarID"] . "</td><td>";
-    }
-  } else {
-    echo "0 results";
-  } */
-
-  //Fourth Block- Prints Out and Displays the Table
-print "<table width=540 border=1>\n"; 
-while ($row = mysqli_fetch_assoc($result1)){ 
-$CarID= $row['CarID'];
-$Make= $row['make'];
-print "<tr>\n"; 
-print "\t<td>\n"; 
-print "\t<td>\n"; 
-print "<font face=arial size=4/><div align=center>$CarID/div></font>"; 
-print "</td>\n";
-print "\t<td>\n"; 
-echo "<font face=arial size=4/>$Make</font>";
-print "</td>\n";
-print "</tr>\n"; 
-} 
-
-print "</table>\n"; 
-
-   
-
-
+$conn= mysqli_connect($host, $username, $password, $dbname); 
+ if(mysqli_connect_errno())
+ {
+  die("connection error ".mysqli_connect_error());
+ }
+ $sql = "SELECT * FROM usedcarinventory";
+$result = mysqli_query($conn, $sql); 
 ?>
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> </title> 
+    <link rel="stylesheet" href="loadData.css "/>
+	</head> 
+	<body> 
+   
+	<table align="center" border="1px" > 
+	<tr> 
+		<th colspan="21"><h2> Dealerships' Inventory</h2></th> 
+		</tr> 
+			  <th> CarID </th> 
+			  <th> vinNumber </th> 
+			  <th> Price </th> 
+			  <th> Miles </th> 
+        <th> StockNumber</th> 
+			  <th> Years </th> 
+			  <th> Make </th> 
+			  <th> Model </th>
+        <th> Trims </th> 
+			  <th> BodyType </th> 
+			  <th> VehicleType </th> 
+			  <th> DriveTrain </th>
+        <th> Transmission </th> 
+			  <th> FuelType </th> 
+			  <th> engineSize </th> 
+			  <th> engineBlock </th>
+        <th> PurchasedFrom </th> 
+			  <th> Street </th> 
+			  <th> City </th> 
+			  <th> States </th>
+        <th> Zip </th>
+
+			  
+		</tr> 
+		
+		<?php while($rows=mysqli_fetch_assoc($result)) 
+		{ 
+		?> 
+		<tr>
+    <td><?php echo $rows['CarID']; ?></td> 
+		<td><?php echo $rows['vinNumber']; ?></td> 
+		<td><?php echo $rows['Price']; ?></td> 
+		<td><?php echo $rows['Miles']; ?></td> 
+    <td><?php echo $rows['StockNumber']; ?></td> 
+		<td><?php echo $rows['Years']; ?></td> 
+		<td><?php echo $rows['Make']; ?></td> 
+		<td><?php echo $rows['Model']; ?></td> 
+    <td><?php echo $rows['Trims']; ?></td> 
+		<td><?php echo $rows['BodyType']; ?></td> 
+		<td><?php echo $rows['VehicleType']; ?></td> 
+		<td><?php echo $rows['DriveTrain']; ?></td> 
+    <td><?php echo $rows['Transmission']; ?></td> 
+		<td><?php echo $rows['FuelType']; ?></td> 
+		<td><?php echo $rows['EngineSize']; ?></td> 
+		<td><?php echo $rows['EngineBlock']; ?></td> 
+    <td><?php echo $rows['PurchasedFrom']; ?></td> 
+		<td><?php echo $rows['Street']; ?></td> 
+		<td><?php echo $rows['City']; ?></td> 
+		<td><?php echo $rows['States']; ?></td> 
+    <td><?php echo $rows['Zip']; ?></td> 
+
+		</tr> 
+	<?php 
+               } 
+          ?> 
+
+	</table> 
+
+	</body> 
+	</html>
