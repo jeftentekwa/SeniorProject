@@ -2,6 +2,7 @@
 body {
     background-color:gray;
 
+
 }
 
 h2 {
@@ -17,10 +18,12 @@ h3{
     color: blue;
 }
 h1{
-    text-align: center;
     font-size:1em;
     color: burlywood;
-    font-family: cursive;
+    text-align: left;
+
+    
+    
 
 }
 #blackP{

@@ -16,7 +16,8 @@ $result = mysqli_query($conn, $sql);
 <!DOCTYPE html> 
 <html> 
 	<head> 
-		<title> </title> 
+	<title> </title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
     <link rel="stylesheet" href="loadData.css "/>
 	</head> 
 	<body> 
@@ -82,6 +83,8 @@ $result = mysqli_query($conn, $sql);
           ?> 
 
 	</table> 
+	<p> click <a href="deleteData.html"> here </a> to delete a record</p>
+	<p></p>
 
 	</body> 
 	</html>

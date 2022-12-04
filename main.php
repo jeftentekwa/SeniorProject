@@ -33,7 +33,7 @@ if (isset($_SESSION["user_id"])) {
             <a class="button" id="loadButton" href="loadData.php" target="_blank" > Load Data </a>
             <a class="button" id="saveButton" href="saveData.html" target="_blank"> Save Data</a>
             <a class="button" id="deleteButton" href="deleteData.html" target="_blank" > Delete </a>
-            <p id="lognOutP"> Welcome <?php echo $user_data['name'];?>
+            <p id="lognOutP"> Welcome <?php echo $user['name']?>
             <a class="button" id="lognOutButton" href="lognInForm.php">logn out</a></p>
         </div>
     </header>
@@ -41,7 +41,7 @@ if (isset($_SESSION["user_id"])) {
         
     </div >
     <div>
-        <h1> J&D INVENTORY</h1>
+        <h1 class="w3-cursive"> J&D INVENTORY</h1>
         <div class="w3-container w3-black w3-padding-64 ">
             <h2>
                 Online inventory management software for cars' dealerships accross The Nation
