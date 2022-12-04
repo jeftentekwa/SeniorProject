@@ -1,20 +1,6 @@
-# SeniorProject
-for our senoir project, we have decided to create a inventory management for used car dealerships. 
-we're going to create a website with hmtl, css, w3css, javascrpit and php
-so far we have a total of 19 files
-the first page to run is the main.html because it's the welcome page and contain links to other pages. 
-on the main page, you can click the sign up button and it will take you to the signupForm.html file
-the signupForm.html file is connecting to a database called "mysql" through the the file called "database.php" once the user sign up, it will take them to the logn In form 
-the lognIn.php is also connected to the database via "database.php" once the logn in is successfull, it will redirect you back to the main page (main.html)
-ps: we still working on redicting the user to the main page. 
-once the user usessfully sign In, on the top left of the main page there 4 different link buttons. 
-the home button redirect the user to the top of the main page,(still working on it),
-the load data button will sent the user to the loadData.html file. this file is connected to the loadData.php file which is connecting to the data named "mysql"
-inside this page, the user can click on the search button to load datas from the database. 
-the save data button will sent the user to the saveData.html file. this file is connected to the saveData.php file which is connecting to the data named "mysql"
-inside this page, the user can save a new car to the database by filling out each text and click on the save button 
-and finally the delete data button will sent the user to the deleteData.html file. this file is connected to the deleteData.php file which is connecting to the data named "mysql"
-inside this page, the user can fill out the form and delete the car if it exit in the database. 
-each php and html files has a css file to style them. 
-also we used javascript to valide the sign up and logn forms so that the user will be require to fill in those text boxes with the valid email and password format. 
-the password requirement is at least 9 characters and one numeric value. 
+# Inventory Manager
+  This project is an inventory management system for small car dealerships. The project is a website with HTML, CSS, W3CSS, Javascript, and PHP. Each of our HTML and PHP files have a related CSS file that is used to style them.
+  The first page that will run is the log in page. If the user has no log in information, then they will be able to create and account using the "sign up" link. Once the user signs up, they will be redirected back to the log in page. The signup and log in page are both connected to a database using the "database.php" file. Javascript has been used for validation for the log in and sign up forms so that they must meet the email and password requirements.
+  After logging in, the user will be taken to the main homepage where there are 4 options at the top left and a log out button towards the right. The 4 buttons: "Home", "Load Data", "Save Data", and "Delete". The "Home" button will take the user back to the homepage from where they are on the website. The "Load Data" button takes the user to the page where they can view the records that are saved into the database. This file is connected to the "loadData.php" file which connects to our MYSQL database. The "Save Data" button will take the user to the page where they can input the information about a car to add it into the database. This file is connected to our database through the "saveData.php" file. The "Delete" button will take the user to the page where they can use the I.D. # of a record in the database to remove that specific record/car from the database. This file is connected to our database through the "deleteData.php" file.
+  REQUIREMENTS:
+  For creating an account, the password requirements require that the password is atleast 9 characters long and must include atleast 1 number. The user must also have XAMPP installed, which is where our database is held.
