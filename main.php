@@ -28,33 +28,50 @@ if (isset($_SESSION["user_id"])) {
 </head>
 <body>
     <header>
-        <div id="buttonDiv" class="w3-container w3-white">
-            <a class="button" id="homeButton" href="#top"> Home</a>
+        <div id="buttonDiv" class="w3-container w3-white w3-padding-32 " >
+            <a class="button" id="homeButton" href="#"> Home</a>
             <a class="button" id="loadButton" href="loadData.php" target="_blank" > Load Data </a>
             <a class="button" id="saveButton" href="saveData.html" target="_blank"> Save Data</a>
             <a class="button" id="deleteButton" href="deleteData.html" target="_blank" > Delete </a>
-            <a class="button" id="lognOutButton" href="lognInForm.php">logn out</a>
+            <p id="lognOutP"> Welcome <?php echo $user_data['name'];?>
+            <a class="button" id="lognOutButton" href="lognInForm.php">logn out</a></p>
         </div>
     </header>
     <div>
         
-    </div>
-    <div class="w3-container  w3-display-middle">
-        <div>
-            <h1>
+    </div >
+    <div>
+        <h1> J&D INVENTORY</h1>
+        <div class="w3-container w3-black w3-padding-64 ">
+            <h2>
                 Online inventory management software for cars' dealerships accross The Nation
-            </h1>
-            <p>
+            </h2>
+            <p id="blackP">
                 Inventory management software that enables you to control your inventory,<br>
                 manage and fulfill your orders, oversee sales, and streamline multiple sales channels.
             </p>
         </div>
         
     </div>
-    <div>
-        <img src="car Invetory.JPG" alt="logoImage" id="logoImg">
+    <div class="w3-container w3-white w3-section w3-padding-64">
+        <h3>Features and Benefits of Using J&D Motor </h3>
+        <p id="whiteP"> J&D Motor provides full-featured used car dealer software to independent auto dealers. <br>
+            J&D Motor goals have always been simple- to provide dealers with a high-quality, <br>
+            easy-to-use Dealer Management System, at an affordable price, while ensuring that a friendly, <br>
+         knowledgeable support  </p>
     </div>
     
+        <img src="car Invetory.JPG" class="w3-container w3-section w3-black" id="img">
+     
+    <div class="w3-container w3-white w3-section w3-padding-64 w3-display-buttommiddle" >
+    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+    <p>Contact: 678-296-7200</p>
+    <a href="#"> Privacy Policy</a>
+    </div>
+
+   
     
 
 </body>

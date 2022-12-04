@@ -36,6 +36,8 @@
    $sql = "DELETE FROM usedcarinventory WHERE CarID = '$CarID'";
    if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully";
+    header("location: main.php");
+    exit; 
   } else {
     echo "Error deleting record: " . $conn->error;
   }

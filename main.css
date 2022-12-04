@@ -1,19 +1,38 @@
 ﻿/* style for the main page*/
 body {
-    background-color:lightpink;
+    background-color:gray;
 
 }
-h1 {
+
+h2 {
     text-align: left;
     font-family: Geneva, Verdana, sans-serif;
     top: 50%;
-    right: 50%;
+    left: 50%;
     font-size: 150px;
+    color: white;
 }
-p{
-    text-align:center;
+h3{
+    text-align: center;
+    color: blue;
+}
+h1{
+    text-align: center;
+    font-size:1em;
+    color: burlywood;
+    font-family: cursive;
 
 }
+#blackP{
+    text-align:center;
+    color: white;
+
+}
+#whiteP{
+    text-align:center;
+    color:black; 
+}
+
 #signInButton, #lognInButton{
     width: 200px;
     margin: 2px 10px;
@@ -43,7 +62,7 @@ p{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-#lognOutButton
+#lognOutP
 {
     width: 100px;
     padding: 10px;
@@ -59,9 +78,41 @@ p{
 }
 
 
-#logoImg{
-    width: 70%;
-    margin-top:450px;
-    margin-right: 300px;;
+#img{
+    width: 100%;
+   
 }
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 2px;
+    top: 50%;
+    right: 50%;
+    
+    
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    
+  }
+
 
