@@ -34,7 +34,7 @@ if (isset($_SESSION["user_id"])) {
             <a class="button" id="saveButton" href="saveData.html" target="_blank"> Save Data</a>
             <a class="button" id="deleteButton" href="deleteData.html" target="_blank" > Delete </a>
             <p id="lognOutP"> Welcome <?php echo $user['name']?>
-            <a class="button" id="lognOutButton" href="lognInForm.php">logn out</a></p>
+            <a class="button" id="lognOutButton" href="lognInForm.php">Log out</a></p>
         </div>
     </header>
     <div>
@@ -44,7 +44,7 @@ if (isset($_SESSION["user_id"])) {
         <h1 class="w3-cursive"> J&D INVENTORY</h1>
         <div class="w3-container w3-black w3-padding-64 ">
             <h2>
-                Online inventory management software for cars' dealerships accross The Nation
+                Online inventory management software for car dealerships accross The Nation
             </h2>
             <p id="blackP">
                 Inventory management software that enables you to control your inventory,<br>
