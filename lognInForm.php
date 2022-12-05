@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           
             <form class="modal-content animate" method="post">
               <div class="imgcontainer">
-              <h1> Logn In</h1>
+              <h1> Log In</h1>
                 <img src="avatarImage.jpg" alt="Avatar" class="avatar">
               </div>
           
